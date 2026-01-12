@@ -1,0 +1,9 @@
+name: Mac local DNS
+dns:
+  # 将完全覆盖原有 default-nameserver
+  default-nameserver: #!replace
+    - system
+  # 将完全覆盖原有 nameserver
+  nameserver: #!replace
+    - 127.0.0.1
+    - 223.5.5.5
