@@ -7,3 +7,14 @@ dns:
   nameserver: #!replace
     - 127.0.0.1
     - 223.5.5.5
+
+# 注意，下面的写法必须搭配原版的 geosite 规则
+# 如果你使用的是其他分支，需要清除缓存后重新下载
+geox-url:
+  geosite: "https://testingcf.jsdelivr.net/gh/v2fly/domain-list-community@release/dlc.dat"
+rules:
+  - GEOSITE,geolocation-!cn@cn,DIRECT # DIRECT 为直连分组，可以改为你自己的分组
+  - GEOSITE,geolocation-!cn,PROXY # PROXY 为代理分组，可以改为你自己的分组
+  - GEOSITE,geolocation-cn@!cn,PROXY
+  - GEOSITE,geolocation-cn,DIRECT
+  - GEOSITE,tld-cn,DIRECT
