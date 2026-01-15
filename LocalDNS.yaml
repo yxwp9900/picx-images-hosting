@@ -17,4 +17,4 @@ rules:
   - GEOSITE,geolocation-cn@!cn,PROXY
   - GEOSITE,geolocation-cn,DIRECT
   - GEOSITE,tld-cn,DIRECT
-  - DOMAIN,surrit.com,PROXY
+  - DOMAIN,surrit.com,🚀 节点选择
